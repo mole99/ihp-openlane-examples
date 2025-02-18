@@ -1,0 +1,15 @@
+meta:
+  version: 2
+  flow: Classic
+  substituting_steps:
+    # Add steps for LVS with KLayout
+    #+Checker.LVS: OpenROAD.WriteCDL
+    #+OpenROAD.WriteCDL: KLayout.LVS
+
+DESIGN_NAME: counter
+VERILOG_FILES: dir::src/*.sv
+CLOCK_PORT: clk_i
+CLOCK_PERIOD: 100
+FP_SIZING: absolute
+DIE_AREA: [0, 0, 70, 70]
+PL_TARGET_DENSITY_PCT: 50
