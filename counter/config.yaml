@@ -3,8 +3,8 @@ meta:
   flow: Classic
   substituting_steps:
     # Add steps for LVS with KLayout
-    #+Checker.LVS: OpenROAD.WriteCDL
-    #+OpenROAD.WriteCDL: KLayout.LVS
+    +Checker.LVS: OpenROAD.WriteCDL
+    +OpenROAD.WriteCDL: KLayout.LVS
 
 DESIGN_NAME: counter
 VERILOG_FILES: dir::src/*.sv
