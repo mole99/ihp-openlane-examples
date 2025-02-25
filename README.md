@@ -1,5 +1,8 @@
 # OpenLane Examples for IHP Open PDK
 
+> [!IMPORTANT]
+> The required changes for the PDK and OpenLane are not yet merged into upstream. If you encounter any issues, please report them here for now.
+
 ## Setup
 
 1. Clone OpenLane with support for IHP:
