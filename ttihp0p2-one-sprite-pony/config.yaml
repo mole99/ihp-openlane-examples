@@ -1,0 +1,22 @@
+meta:
+  version: 2
+  flow: Classic
+  substituting_steps:
+    # Add steps for LVS with KLayout
+    +Checker.LVS: OpenROAD.WriteCDL
+    +OpenROAD.WriteCDL: KLayout.LVS
+
+DESIGN_NAME: tt_um_top_mole99
+VERILOG_FILES: dir::src/*.sv
+CLOCK_PORT: clk
+CLOCK_PERIOD: 25 # 40 MHz
+
+DIE_AREA: [0, 0, 212.16, 154.98]
+FP_DEF_TEMPLATE: dir::tt_block_1x1.def
+FP_SIZING: absolute
+BOTTOM_MARGIN_MULT: 1
+TOP_MARGIN_MULT: 1
+LEFT_MARGIN_MULT: 6
+RIGHT_MARGIN_MULT: 6
+
+PL_TARGET_DENSITY_PCT: 68
