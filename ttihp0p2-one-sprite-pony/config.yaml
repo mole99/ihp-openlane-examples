@@ -8,12 +8,23 @@ meta:
 
 DESIGN_NAME: tt_um_top_mole99
 VERILOG_FILES: dir::src/*.sv
-CLOCK_PORT: clk
-CLOCK_PERIOD: 25 # 40 MHz
 
+FP_SIZING: absolute
 DIE_AREA: [0, 0, 212.16, 154.98]
 FP_DEF_TEMPLATE: dir::tt_block_1x1.def
-FP_SIZING: absolute
+
+# Shorter pins
+FP_IO_HLENGTH: 2
+FP_IO_VLENGTH: 2
+
+CLOCK_PERIOD: 25 # 40 MHz
+CLOCK_PORT: clk
+
+# Don't use power rings or any TopMetal
+DESIGN_IS_CORE: false
+RT_MAX_LAYER: Metal5
+
+# Reduce wasted space
 BOTTOM_MARGIN_MULT: 1
 TOP_MARGIN_MULT: 1
 LEFT_MARGIN_MULT: 6
